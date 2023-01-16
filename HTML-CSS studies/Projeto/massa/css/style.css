@@ -1,0 +1,20 @@
+/*
+A estrutura de um CSS e definas da seguinte forma:
+    declaração(seletor){
+        propriedade:valor;
+    }
+*/
+
+
+* {
+    /*Reset CSS*/
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+}
