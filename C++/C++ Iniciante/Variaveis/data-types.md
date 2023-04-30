@@ -10,3 +10,8 @@
 | **float** | **32** | **7 digitos significativos** |
 | **double** | **64** | **dígitos significativos** |
 
+<hr>
+
+## Variáveis
+
++ String -> que esta entre aspas "texto"
