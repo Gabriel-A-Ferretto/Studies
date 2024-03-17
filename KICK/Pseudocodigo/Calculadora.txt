@@ -1,0 +1,69 @@
+funcao real soma(real a, real b)
+inicio
+    retorne a + b
+fimfuncao
+
+funcao real subtracao(real a, real b)
+inicio
+    retorne a - b
+fimfuncao
+
+funcao real multiplicacao(real a, real b)
+inicio
+    retorne a * b
+fimfuncao
+
+funcao real divisao(real a, real b)
+inicio
+    se b <> 0 entao
+        retorne a / b
+    senao
+        retorne -1 // Retorna -1 para indicar divisão por zero
+    fimse
+fimfuncao
+
+algoritmo
+var
+    num1, num2, resultado: real
+    operacao: caractere
+
+inicio
+    escreva("Bem-vindo à Calculadora!")
+    
+    escreva("Escolha o tipo de operação:")
+    escreva("1 - Adição (+)")
+    escreva("2 - Subtração (-)")
+    escreva("3 - Multiplicação (*)")
+    escreva("4 - Divisão (/)")
+    leia(operacao)
+
+    se operacao = "1" ou operacao = "2" ou operacao = "3" ou operacao = "4" entao
+        escreva("Digite o primeiro número: ")
+        leia(num1)
+        escreva("Digite o segundo número: ")
+        leia(num2)
+
+        escolha operacao
+            caso "1":
+                resultado <- soma(num1, num2)
+                escreva("O resultado da adição é: ", resultado)
+            caso "2":
+                resultado <- subtracao(num1, num2)
+                escreva("O resultado da subtração é: ", resultado)
+            caso "3":
+                resultado <- multiplicacao(num1, num2)
+                escreva("O resultado da multiplicação é: ", resultado)
+            caso "4":
+                resultado <- divisao(num1, num2)
+                se resultado <> -1 entao
+                    escreva("O resultado da divisão é: ", resultado)
+                senao
+                    escreva("Erro: divisão por zero!")
+                fimse
+            senao:
+                escreva("Operação inválida!")
+        fimescolha
+    senao
+        escreva("Opção de operação inválida!")
+    fimse
+fimalgoritmo
